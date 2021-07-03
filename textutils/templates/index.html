@@ -2,10 +2,15 @@
 <html lang="en">
     <meta charset="utf-8">
     <head>
-        <h1>Template is Working</h1>
+        template
     </head>
     <body>
-        This is a Template designed
-        <p><b>{{name}}</b> is from <b>{{place}}</b></p>
+        <h1><b>Your Analysed Text-Removed Punctuations</b>
+        <h1>This is a Text Analyzer. Enter your Text Below</h1>
+        <form action="/removepunc" method="get">
+            <textarea name="text" style="margin: 0px; width: 1251px; height: 177px;"></textarea>
+            <input type="checkbox" name='RemovePunc'>Remove Punctuation<br>
+            <button>Analyze Text</button>
+        </form>
     </body>
 </html>

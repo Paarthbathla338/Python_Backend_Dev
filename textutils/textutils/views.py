@@ -4,9 +4,23 @@ from django.shortcuts import render
 
 
 def index(request):
-    param={"name":"Paarth", "place":"United States" }
-    return render(request,'index.html',param)
+
+    return render(request,'index.html')
 
 def removepunc(request):
-    return HttpResponse("About Paarth Bathla")
+    textdj=(request.GET.get("text",'default'))
+    removepuncdj=(request.GET.get("removepunc",'default'))
+    print(textdj)
+    print(removepuncdj)
+    # analysed=textdj
+    punctuation='''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    analysed=""
+    
+    for char in textdj:
+        if char not in punctuation:
+            analysed=analysed+char
+            
+
+    params={"purpose":"remove punctuations","analysed_text":analysed}
+    return render(request,'analyse.html',params)
 
