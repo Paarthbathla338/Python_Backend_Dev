@@ -7,9 +7,12 @@
     <body>
         <h1><b>Your Analysed Text-Removed Punctuations</b>
         <h1>This is a Text Analyzer. Enter your Text Below</h1>
-        <form action="/removepunc" method="get">
+        <form action="/analyse" method="get">
             <textarea name="text" style="margin: 0px; width: 1251px; height: 177px;"></textarea>
-            <input type="checkbox" name='RemovePunc'>Remove Punctuation<br>
+            <input type="checkbox" name='removepunc'>Remove Punctuation<br>
+            <input type="checkbox" name='uppercase'>Uppercase<br>
+
+
             <button>Analyze Text</button>
         </form>
     </body>
