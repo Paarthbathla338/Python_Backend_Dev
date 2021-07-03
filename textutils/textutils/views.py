@@ -1,8 +1,12 @@
 #File Created by Paarth
 from django.http import HttpResponse
-def index(request):
-    return HttpResponse("<h1><b>Hello Paarth</b></h1><a href='https://github.com/'>Github</a>")
+from django.shortcuts import render
 
-def about(request):
+
+def index(request):
+    param={"name":"Paarth", "place":"United States" }
+    return render(request,'index.html',param)
+
+def removepunc(request):
     return HttpResponse("About Paarth Bathla")
 
