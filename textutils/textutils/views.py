@@ -18,12 +18,11 @@ def analyse(request):
     analysed=""
     analysed1=""
 
-    if removepunc == 'on': 
-        punctuation='''!()-[]{};:'"\,<>./?@#$%^&*_~'''
-        for char in textdj:
-            if char not in punctuation:
-                analysed= analysed + char
-                params = {"purpose1":"remove punctuations","analysed_text":analysed}
+    punctuation='''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    for char in textdj:
+        if char not in punctuation:
+            analysed= analysed + char
+            params = {"purpose1":"remove punctuations","at":analysed}
 
 
     
