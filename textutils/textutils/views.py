@@ -29,7 +29,7 @@ def analyse(request):
     if uppercase == 'on':
         for char in textdj:
             analysed1 = analysed1 + char.upper()
-            params = {"purpose":"uppercase","op":analysed1}
+            params = {"purpose":"uppercase","paarth":analysed1}
 
     
     return render(request,"analyse.html",params)
